@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 export default function Header() {
   return (
     <header className="header">
-      <span className="logo">Your Name</span>
+      <span className="logo">Ghiro A. Geronimo</span>
       <nav>
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/about">About</NavLink>
