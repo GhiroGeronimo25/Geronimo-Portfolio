@@ -1,40 +1,76 @@
 import { Link } from 'react-router-dom'
 import PageTitle from '../components/PageTitle.jsx'
+import ProjectCard from '../components/ProjectCard.jsx'
+import Reveal from '../components/Reveal.jsx'
+import useTypewriter from '../components/useTypewriter.js'
 import { profile } from '../data/profile.js'
+import { skills } from '../data/skills.js'
+import { projects } from '../data/projects.js'
 
-const stack = ['React', 'JavaScript', 'Node.js', 'Tailwind CSS']
+const words = ['web apps.', 'REST APIs.', 'responsive interfaces.', 'full stack projects.']
+const tech = skills.flatMap((g) => g.items)
 
 export default function Home() {
+  const typed = useTypewriter(words)
+
   return (
-    <section className="relative py-8 sm:py-16">
+    <>
       <PageTitle />
-      <div aria-hidden="true" className="pointer-events-none absolute -top-8 right-0 h-72 w-72 rounded-full bg-indigo-600/30 blur-3xl" />
-      <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-56 w-56 rounded-full bg-violet-600/20 blur-3xl" />
-      <div className="relative">
-        <p className="inline-block rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 ring-1 ring-indigo-500/30">
-          {profile.role}
-        </p>
-        <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-          Hi, I&apos;m{' '}
-          <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-            {profile.name}
-          </span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-slate-400 sm:text-xl">
-          I build responsive, accessible web apps from the interface to the server.
-          I&apos;m a student developer who loves turning ideas into working products
-          that look good and are easy for everyone to use.
-        </p>
-        <ul className="mt-6 flex flex-wrap gap-2" aria-label="Main technologies">
-          {stack.map((t) => (
-            <li key={t} className="rounded-md border border-slate-700 bg-slate-900 px-3 py-1 text-sm font-medium text-slate-300">{t}</li>
+      <section className="relative flex min-h-[70vh] flex-col justify-center py-8">
+        <div aria-hidden="true" className="pointer-events-none absolute -top-10 right-0 h-72 w-72 animate-float rounded-full bg-indigo-600/30 blur-3xl" />
+        <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-60 w-60 animate-float rounded-full bg-fuchsia-600/20 blur-3xl [animation-delay:-4s]" />
+        <div className="relative">
+          <p className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 ring-1 ring-indigo-500/30">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
+            {profile.role}
+          </p>
+          <h1 className="mt-6 text-5xl font-bold tracking-tight text-white sm:text-7xl">
+            Hi, I&apos;m <br className="sm:hidden" />
+            <span className="animate-gradient bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent">{profile.name}</span>
+          </h1>
+          <p className="sr-only">I build web apps, REST APIs and responsive interfaces.</p>
+          <p aria-hidden="true" className="mt-5 min-h-[2.5rem] font-display text-2xl text-slate-300 sm:text-3xl">
+            I build <span className="text-white">{typed}</span><span className="ml-0.5 inline-block h-6 w-0.5 translate-y-1 animate-blink bg-indigo-400" />
+          </p>
+          <p className="mt-6 max-w-2xl text-lg text-slate-400">
+            A student developer who loves turning ideas into working products that look good and are easy for everyone to use.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link to="/projects" className="btn btn-primary">See my projects</Link>
+            <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
+          </div>
+        </div>
+      </section>
+
+      <div className="overflow-hidden border-y border-slate-800 py-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <ul className="flex w-max animate-marquee hover:[animation-play-state:paused]" aria-label="Technologies I use">
+          {[...tech, ...tech].map((t, i) => (
+            <li key={i} aria-hidden={i >= tech.length} className="mr-3 rounded-md border border-slate-700 bg-slate-900 px-4 py-1.5 font-display text-sm font-medium text-slate-300">{t}</li>
           ))}
         </ul>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <Link to="/projects" className="btn btn-primary">See my projects</Link>
-          <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
-        </div>
       </div>
-    </section>
+
+      <section className="mt-20">
+        <Reveal>
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">Featured projects</h2>
+            <Link to="/projects" className="font-medium text-indigo-400 underline hover:text-indigo-300">View all projects</Link>
+          </div>
+        </Reveal>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          {projects.slice(0, 2).map((project, i) => (
+            <Reveal key={project.title} delay={i * 120}><ProjectCard {...project} /></Reveal>
+          ))}
+        </div>
+      </section>
+
+      <Reveal className="mt-20">
+        <section className="rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-600/20 to-fuchsia-600/10 p-8 text-center sm:p-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">Let&apos;s build something together</h2>
+          <p className="mx-auto mt-3 max-w-xl text-slate-300">Have an idea, a project or an opportunity? I&apos;d love to hear about it.</p>
+          <a href={`mailto:${profile.email}`} className="btn btn-primary mt-6">Email me</a>
+        </section>
+      </Reveal>
+    </>
   )
 }
