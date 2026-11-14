@@ -6,7 +6,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx'
 export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col overflow-x-hidden">
-      <a href="#content" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand-800">
+      <a href="#content" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-indigo-300">
         Skip to main content
       </a>
       <ScrollToTop />

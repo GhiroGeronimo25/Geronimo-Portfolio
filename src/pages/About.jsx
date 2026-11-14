@@ -5,11 +5,11 @@ export default function About() {
   return (
     <section>
       <PageTitle title="About" />
-      <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">About me</h1>
-      <div className="mt-5 max-w-2xl space-y-4 text-lg text-slate-600">
+      <h1 className="text-3xl font-bold text-white sm:text-4xl">About me</h1>
+      <div className="mt-5 max-w-2xl space-y-4 text-lg text-slate-400">
         <p>
-          I&apos;m Ghiro, a student learning frontend web development. I started with HTML, CSS
-          and JavaScript, and now build multi-page apps with React, using Git and GitHub to
+          I&apos;m Ghiro, a student learning full stack web development. I started with HTML, CSS
+          and JavaScript, and now build multi-page apps with React and Node.js, using Git and GitHub to
           track my work.
         </p>
         <p>
@@ -19,14 +19,14 @@ export default function About() {
         </p>
       </div>
 
-      <h2 className="mt-12 text-2xl font-semibold text-slate-900">Skills</h2>
+      <h2 className="mt-12 text-2xl font-semibold text-white">Skills</h2>
       <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map(({ group, items }) => (
-          <div key={group} className="rounded-xl border border-slate-200 p-5">
-            <h3 className="font-semibold text-slate-900">{group}</h3>
+          <div key={group} className="rounded-xl border border-slate-800 p-5">
+            <h3 className="font-semibold text-white">{group}</h3>
             <ul className="mt-3 flex flex-wrap gap-2">
               {items.map((item) => (
-                <li key={item} className="rounded-full bg-brand-100 px-3 py-1 text-sm font-medium text-brand-800">{item}</li>
+                <li key={item} className="rounded-full bg-indigo-500/10 ring-1 ring-indigo-500/20 px-3 py-1 text-sm font-medium text-indigo-300">{item}</li>
               ))}
             </ul>
           </div>
