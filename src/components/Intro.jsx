@@ -31,7 +31,7 @@ export default function Intro() {
       <div aria-hidden="true" className="relative flex h-20 w-20 animate-pop items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 font-display text-3xl font-bold text-white shadow-2xl shadow-indigo-500/40">
         GG
       </div>
-      <p aria-hidden="true" className="relative mt-8 text-center font-display text-3xl font-bold text-white sm:text-5xl">
+      <p aria-hidden="true" className="relative mt-8 text-center font-display text-2xl font-bold text-white sm:text-5xl">
         {profile.name.split('').map((char, i) => (
           <span key={i} className="inline-block animate-fade-up" style={{ animationDelay: `${500 + i * 55}ms` }}>
             {char === ' ' ? '\u00A0' : char}

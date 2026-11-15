@@ -24,7 +24,7 @@ export default function Home() {
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
             {profile.role}
           </p>
-          <h1 className="mt-6 text-[clamp(2.5rem,5.5vw,5rem)] font-bold leading-tight tracking-tight text-white">
+          <h1 className="mt-6 text-[clamp(2.25rem,5vw,4.5rem)] font-bold leading-tight tracking-tight text-white">
             Hi, I&apos;m <br className="sm:hidden" />
             <span className="animate-gradient bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent">{profile.name}</span>
           </h1>

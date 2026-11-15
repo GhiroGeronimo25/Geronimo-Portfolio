@@ -8,6 +8,8 @@ export default function Footer() {
         <ul className="flex gap-4">
           <li><a href={`mailto:${profile.email}`} className="underline hover:text-white">Email</a></li>
           <li><a href={profile.github} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">GitHub<span className="sr-only"> (opens in a new tab)</span></a></li>
+                  <li><a href={profile.facebook} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Facebook<span className="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href={profile.instagram} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Instagram<span className="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </div>
     </footer>
