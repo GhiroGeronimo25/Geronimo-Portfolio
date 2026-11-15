@@ -9,7 +9,7 @@ export default function Contact() {
       <p className="mt-3 max-w-2xl text-lg text-slate-400">
         Want to work together or just say hello? Reach out through any of these.
       </p>
-      <ul className="mt-8 max-w-xl space-y-4">
+      <ul className="mt-8 grid gap-4 sm:grid-cols-2">
         <li className="rounded-xl border border-slate-800 p-5">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Email</h2>
           <a href={`mailto:${profile.email}`} className="mt-1 block break-all text-lg font-medium text-indigo-400 underline hover:text-indigo-300">{profile.email}</a>

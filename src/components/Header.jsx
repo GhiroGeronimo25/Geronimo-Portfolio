@@ -36,8 +36,8 @@ export default function Header() {
   }, [open])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 sm:px-6">
-      <div className={`mx-auto flex max-w-7xl items-center justify-between rounded-2xl border px-4 py-2 backdrop-blur-xl transition-all duration-300 ${scrolled ? 'border-slate-700 bg-slate-900/90 shadow-xl shadow-black/30' : 'border-slate-800/60 bg-slate-900/50'}`}>
+    <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 sm:px-6 lg:px-16">
+      <div className={`mx-auto flex max-w-[2800px] items-center justify-between rounded-2xl border px-4 py-2 backdrop-blur-xl transition-all duration-300 ${scrolled ? 'border-slate-700 bg-slate-900/90 shadow-xl shadow-black/30' : 'border-slate-800/60 bg-slate-900/50'}`}>
         <Link to="/" className="group flex items-center gap-3 font-display text-lg font-bold text-white">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-sm transition-transform duration-300 group-hover:rotate-12">GG</span>
           <span className="hidden sm:inline">{profile.name}</span>

@@ -6,7 +6,7 @@ export default function About() {
     <section>
       <PageTitle title="About" />
       <h1 className="text-3xl font-bold text-white sm:text-4xl">About me</h1>
-      <div className="mt-5 max-w-2xl space-y-4 text-lg text-slate-400">
+      <div className="mt-5 max-w-3xl space-y-4 text-lg text-slate-400">
         <p>
           I&apos;m Ghiro, a student learning full stack web development. I started with HTML, CSS
           and JavaScript, and now build multi-page apps with React and Node.js, using Git and GitHub to
@@ -20,7 +20,7 @@ export default function About() {
       </div>
 
       <h2 className="mt-12 text-2xl font-semibold text-white">Skills</h2>
-      <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {skills.map(({ group, items }) => (
           <div key={group} className="rounded-xl border border-slate-800 p-5">
             <h3 className="font-semibold text-white">{group}</h3>

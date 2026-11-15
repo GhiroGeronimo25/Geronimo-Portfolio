@@ -24,7 +24,7 @@ export default function Home() {
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
             {profile.role}
           </p>
-          <h1 className="mt-6 text-5xl font-bold tracking-tight text-white sm:text-6xl xl:text-7xl">
+          <h1 className="mt-6 text-[clamp(2.5rem,5.5vw,5rem)] font-bold leading-tight tracking-tight text-white">
             Hi, I&apos;m <br className="sm:hidden" />
             <span className="animate-gradient bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent">{profile.name}</span>
           </h1>
@@ -40,7 +40,7 @@ export default function Home() {
             <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
           </div>
         </div>
-        <div aria-hidden="true" className="relative hidden animate-float lg:block">
+        <div aria-hidden="true" className="relative hidden animate-float md:block">
           <div className="rounded-2xl border border-slate-700 bg-slate-900/80 shadow-2xl shadow-indigo-900/30 backdrop-blur">
             <div className="flex gap-2 border-b border-slate-800 px-4 py-3">
               <span className="h-3 w-3 rounded-full bg-red-400/80" />

@@ -12,7 +12,7 @@ export default function Layout() {
       </a>
       <ScrollToTop />
       <Header />
-      <main id="content" key={pathname} className="mx-auto w-full max-w-7xl flex-1 animate-fade-up px-4 pb-14 pt-28 sm:px-6">
+      <main id="content" key={pathname} className="mx-auto w-full max-w-[2800px] flex-1 animate-fade-up px-4 pb-14 pt-28 sm:px-6 lg:px-16">
         <Outlet />
       </main>
       <Footer />

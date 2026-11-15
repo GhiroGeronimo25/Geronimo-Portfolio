@@ -3,7 +3,7 @@ import { profile } from '../data/profile.js'
 export default function Footer() {
   return (
     <footer className="border-t border-slate-800 bg-slate-950 text-slate-400">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-[2800px] flex-col items-center justify-between gap-3 px-4 py-6 text-sm sm:flex-row sm:px-6 lg:px-16">
         <p>&copy; {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
         <ul className="flex gap-4">
           <li><a href={`mailto:${profile.email}`} className="underline hover:text-white">Email</a></li>
