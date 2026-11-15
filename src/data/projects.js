@@ -9,6 +9,7 @@ export const projects = [
     imageAlt: 'Screenshot of the FindIT item reports page showing lost and found item cards such as a camera, a wallet, a phone and an umbrella, each with a status and a Request Claim button',
     tags: ['PostgreSQL', 'JavaScript', 'HTML', 'CSS', 'Brevo', 'Real-Time', 'Render'],
     repoUrl: 'https://github.com/GhiroGeronimo25/findit-project',
+    liveUrl: 'https://findit-project-7plm.onrender.com/',
   },
   {
     title: 'Personal Portfolio',
@@ -18,5 +19,6 @@ export const projects = [
     imageAlt: 'Screenshot of the portfolio home page showing the name Ghiro A. Geronimo and the title Full Stack Developer',
     tags: ['React', 'React Router', 'Tailwind CSS', 'Vite'],
     repoUrl: 'https://github.com/GhiroGeronimo25/Geronimo-Portfolio',
+    liveUrl: 'https://portfolio-uiiq.onrender.com/',
   },
 ]

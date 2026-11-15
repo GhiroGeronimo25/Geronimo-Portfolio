@@ -20,7 +20,7 @@ export default function Home() {
         <div aria-hidden="true" className="pointer-events-none absolute -top-10 right-0 h-72 w-72 animate-float rounded-full bg-indigo-600/30 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-60 w-60 animate-float rounded-full bg-fuchsia-600/20 blur-3xl [animation-delay:-4s]" />
         <div className="relative">
-          <p className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 ring-1 ring-indigo-500/30">
+          <p className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-indigo-300 ring-1 ring-indigo-500/30">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
             {profile.role}
           </p>

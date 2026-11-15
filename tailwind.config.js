@@ -15,6 +15,12 @@ export default {
         float: { '0%,100%': { transform: 'translate(0,0) scale(1)' }, '50%': { transform: 'translate(20px,-30px) scale(1.1)' } },
         gradient: { '0%,100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
         blink: { '0%,100%': { opacity: 1 }, '50%': { opacity: 0 } },
+        wipe: {
+          '0%': { transform: 'scaleX(0)', transformOrigin: 'left' },
+          '45%': { transform: 'scaleX(1)', transformOrigin: 'left' },
+          '55%': { transform: 'scaleX(1)', transformOrigin: 'right' },
+          '100%': { transform: 'scaleX(0)', transformOrigin: 'right' },
+        },
         marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
       },
       animation: {
@@ -23,6 +29,7 @@ export default {
         gradient: 'gradient 6s ease infinite',
         blink: 'blink 1s step-end infinite',
         marquee: 'marquee 28s linear infinite',
+        wipe: 'wipe 0.9s cubic-bezier(0.77, 0, 0.18, 1) both',
       },
     },
   },
