@@ -15,6 +15,11 @@ export default {
         float: { '0%,100%': { transform: 'translate(0,0) scale(1)' }, '50%': { transform: 'translate(20px,-30px) scale(1.1)' } },
         gradient: { '0%,100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
         blink: { '0%,100%': { opacity: 1 }, '50%': { opacity: 0 } },
+        pop: {
+          '0%': { opacity: 0, transform: 'scale(0.4) rotate(-25deg)' },
+          '100%': { opacity: 1, transform: 'scale(1) rotate(0)' },
+        },
+        load: { '0%': { width: '0%' }, '100%': { width: '100%' } },
         wipe: {
           '0%': { transform: 'scaleX(0)', transformOrigin: 'left' },
           '45%': { transform: 'scaleX(1)', transformOrigin: 'left' },
@@ -29,6 +34,8 @@ export default {
         gradient: 'gradient 6s ease infinite',
         blink: 'blink 1s step-end infinite',
         marquee: 'marquee 28s linear infinite',
+        pop: 'pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both',
+        load: 'load 2.2s ease-in-out both',
         wipe: 'wipe 0.9s cubic-bezier(0.77, 0, 0.18, 1) both',
       },
     },

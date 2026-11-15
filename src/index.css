@@ -19,8 +19,12 @@
   .reveal.is-visible { opacity: 1; transform: none; }
 }
 
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Visitors who ask for reduced motion keep gentle fades but lose the heavy movement. */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  .reveal { opacity: 1; transform: none; }
+  .animate-float, .animate-marquee, .animate-gradient, .animate-blink, .animate-pulse { animation: none !important; }
+  .animate-fade-up { animation: fadeIn 0.4s ease-out both !important; }
   .page-wipe { display: none; }
+  .reveal { transform: none; }
 }

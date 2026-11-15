@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 import ScrollToTop from '../components/ScrollToTop.jsx'
+import Intro from '../components/Intro.jsx'
 
 export default function Layout() {
   const { pathname } = useLocation()
@@ -15,6 +16,7 @@ export default function Layout() {
       <a href="#content" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-indigo-300">
         Skip to main content
       </a>
+      <Intro />
       <ScrollToTop />
       <Header />
       {changedPage && (
