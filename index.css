@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  @media (min-width: 1536px) { html { font-size: 112.5%; } }
+  @media (min-width: 2200px) { html { font-size: 137.5%; } }
+  body { @apply bg-slate-950 font-sans text-slate-300 antialiased; }
+  h1, h2, h3 { @apply font-display; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-indigo-400; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200 hover:-translate-y-0.5; }
+  .btn-primary { @apply bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-lg shadow-indigo-900/40 hover:from-indigo-500 hover:to-violet-500 hover:shadow-indigo-500/30; }
+  .btn-secondary { @apply border border-slate-700 bg-slate-900 text-slate-200 hover:border-indigo-400 hover:bg-slate-800; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Visitors who ask for reduced motion keep gentle fades but lose the heavy movement. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-marquee, .animate-gradient, .animate-blink, .animate-pulse { animation: none !important; }
+  .animate-fade-up { animation: fadeIn 0.4s ease-out both !important; }
+  .page-wipe { display: none; }
+  .reveal { transform: none; }
+}
