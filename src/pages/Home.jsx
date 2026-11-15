@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <PageTitle />
-      <section className="relative flex min-h-[70vh] flex-col justify-center py-8">
+      <section className="relative grid min-h-[75vh] items-center gap-12 py-8 lg:grid-cols-2">
         <div aria-hidden="true" className="pointer-events-none absolute -top-10 right-0 h-72 w-72 animate-float rounded-full bg-indigo-600/30 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-60 w-60 animate-float rounded-full bg-fuchsia-600/20 blur-3xl [animation-delay:-4s]" />
         <div className="relative">
@@ -24,7 +24,7 @@ export default function Home() {
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
             {profile.role}
           </p>
-          <h1 className="mt-6 text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="mt-6 text-5xl font-bold tracking-tight text-white sm:text-6xl xl:text-7xl">
             Hi, I&apos;m <br className="sm:hidden" />
             <span className="animate-gradient bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent">{profile.name}</span>
           </h1>
@@ -38,6 +38,22 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/projects" className="btn btn-primary">See my projects</Link>
             <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
+          </div>
+        </div>
+        <div aria-hidden="true" className="relative hidden animate-float lg:block">
+          <div className="rounded-2xl border border-slate-700 bg-slate-900/80 shadow-2xl shadow-indigo-900/30 backdrop-blur">
+            <div className="flex gap-2 border-b border-slate-800 px-4 py-3">
+              <span className="h-3 w-3 rounded-full bg-red-400/80" />
+              <span className="h-3 w-3 rounded-full bg-amber-400/80" />
+              <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
+            </div>
+            <div className="space-y-2 p-6 font-mono text-sm sm:text-base">
+              <p><span className="text-fuchsia-400">const</span> <span className="text-indigo-300">developer</span> = {'{'}</p>
+              <p className="pl-6">name: <span className="text-emerald-300">&quot;{profile.name}&quot;</span>,</p>
+              <p className="pl-6">role: <span className="text-emerald-300">&quot;{profile.role}&quot;</span>,</p>
+              <p className="pl-6">stack: <span className="text-emerald-300">[&quot;React&quot;, &quot;Node.js&quot;, &quot;PostgreSQL&quot;]</span>,</p>
+              <p>{'}'}</p>
+            </div>
           </div>
         </div>
       </section>
