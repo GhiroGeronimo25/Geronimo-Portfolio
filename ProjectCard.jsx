@@ -1,7 +1,9 @@
 export default function ProjectCard({ title, description, image, imageAlt, tags = [], repoUrl, liveUrl }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-indigo-500/50">
-      <img src={image} alt={imageAlt} loading="lazy" className="aspect-video w-full border-b border-slate-800 object-cover object-top" />
+    <article className="group flex flex-col overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-indigo-500/50">
+      <div className="overflow-hidden border-b border-slate-800">
+        <img src={image} alt={imageAlt} loading="lazy" className="aspect-video w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+      </div>
       <div className="flex flex-1 flex-col p-5">
         <h2 className="text-xl font-semibold text-white">{title}</h2>
         <p className="mt-2 text-slate-400">{description}</p>
