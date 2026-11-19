@@ -73,9 +73,9 @@ export default function Home() {
             <Link to="/projects" className="font-medium text-indigo-400 underline hover:text-indigo-300">View all projects</Link>
           </div>
         </Reveal>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          {projects.slice(0, 2).map((project, i) => (
-            <Reveal key={project.title} delay={i * 120}><ProjectCard {...project} /></Reveal>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project, i) => (
+            <Reveal key={project.title} delay={i * 120} className="h-full"><ProjectCard {...project} /></Reveal>
           ))}
         </div>
       </section>
