@@ -12,7 +12,7 @@ export default function Projects() {
       <PageHeader eyebrow="Projects" title="Things I've" accent="built" description="Things I've made while learning full stack development. Open the live site or the code for each one." />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {projects.map((project, i) => (
-          <Reveal key={project.title} delay={i * 120}><ProjectCard {...project} /></Reveal>
+          <Reveal key={project.title} delay={i * 120} className="h-full"><ProjectCard {...project} /></Reveal>
         ))}
       </div>
       <Reveal className="mt-14">
