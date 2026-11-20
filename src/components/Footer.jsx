@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer className="relative mt-10 border-t border-slate-800 bg-slate-950">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent" />
-      <div className="mx-auto grid max-w-[2800px] gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.5fr_1fr_1fr] lg:px-16">
+      <div className="mx-auto grid max-w-[2800px] gap-10 px-4 py-14 sm:px-6 md:grid-cols-[2fr_1fr_1fr] md:gap-16 lg:px-16">
         <div>
           <Link to="/" className="inline-flex items-center gap-3 font-display text-lg font-bold text-white">
             <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-sm">GG</span>

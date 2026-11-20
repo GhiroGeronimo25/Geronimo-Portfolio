@@ -13,7 +13,6 @@ export default function Projects() {
       <PageTitle title="Projects" />
       <PageHeader
         title="Projects"
-        accent="I've built."
         description={`${projects.length} apps made while learning full stack development. Open the live site to try each one, or read the code on GitHub.`}
       />
 

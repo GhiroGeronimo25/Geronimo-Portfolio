@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section>
       <PageTitle title="Contact" />
-      <PageHeader title="Contact" accent="me." description="Want to work together or just say hello? Email is the fastest way to reach me." />
+      <PageHeader title="Contact" description="Want to work together or just say hello? Email is the fastest way to reach me." />
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
         <Reveal className="h-full">
@@ -47,9 +47,9 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={120} className="h-full">
-          <div className="h-full rounded-2xl border border-slate-800 bg-slate-900 p-2">
+          <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-2">
             <h2 className="px-4 pb-1 pt-4 font-display text-lg font-semibold text-white">Find me online</h2>
-            <ul>
+            <ul className="flex flex-1 flex-col justify-around divide-y divide-slate-800/70">
               {socials.map(({ label, value, href, Icon }) => (
                 <li key={label}>
                   <a href={href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-xl p-4 transition hover:bg-slate-800/70">

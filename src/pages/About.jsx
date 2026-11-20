@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section>
       <PageTitle title="About" />
-      <PageHeader title="About" accent="me." description="A student who enjoys turning ideas into working, accessible web apps." />
+      <PageHeader title="About" description="A student who enjoys turning ideas into working, accessible web apps." />
 
       <div className="mt-10 grid items-start gap-8 lg:grid-cols-[360px_1fr] xl:gap-12">
         <Reveal className="lg:sticky lg:top-28">
@@ -71,8 +71,10 @@ export default function About() {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
 
-          <Reveal className="mt-14">
+      <Reveal className="mt-14">
             <h2 className="text-3xl font-bold text-white">Skills</h2>
             <div className="mt-6 divide-y divide-slate-800 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
               {skills.map(({ group, items }) => (
@@ -87,8 +89,6 @@ export default function About() {
               ))}
             </div>
           </Reveal>
-        </div>
-      </div>
     </section>
   )
 }
