@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section>
       <PageTitle title="Contact" />
-      <PageHeader title="Contact" description="Want to work together or just say hello? Email is the fastest way to reach me." />
+      <PageHeader eyebrow="Contact" title="Let's" accent="talk" description="Want to work together or just say hello? Reach out through any of these." />
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
         <Reveal className="h-full">

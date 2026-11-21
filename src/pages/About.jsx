@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section>
       <PageTitle title="About" />
-      <PageHeader title="About" description="A student who enjoys turning ideas into working, accessible web apps." />
+      <PageHeader eyebrow="About" title="A bit about" accent="me" />
 
       <div className="mt-10 grid items-start gap-8 lg:grid-cols-[360px_1fr] xl:gap-12">
         <Reveal className="lg:sticky lg:top-28">

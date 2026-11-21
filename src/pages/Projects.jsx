@@ -11,10 +11,7 @@ export default function Projects() {
   return (
     <section>
       <PageTitle title="Projects" />
-      <PageHeader
-        title="Projects"
-        description={`${projects.length} apps made while learning full stack development. Open the live site to try each one, or read the code on GitHub.`}
-      />
+      <PageHeader eyebrow="Projects" title="Things I've" accent="built" description="Things I've made while learning full stack development. Open the live site or the code for each one." />
 
       <div className="mt-10 space-y-6">
         {first && <Reveal><ProjectCard {...first} featured /></Reveal>}
