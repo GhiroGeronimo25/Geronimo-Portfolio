@@ -7,19 +7,15 @@ import { projects } from '../data/projects.js'
 import { profile } from '../data/profile.js'
 
 export default function Projects() {
-  const [first, ...rest] = projects
   return (
     <section>
       <PageTitle title="Projects" />
       <PageHeader eyebrow="Projects" title="Things I've" accent="built" description="Things I've made while learning full stack development. Open the live site or the code for each one." />
 
-      <div className="mt-10 space-y-6">
-        {first && <Reveal><ProjectCard {...first} featured /></Reveal>}
-        <div className="grid gap-6 md:grid-cols-2">
-          {rest.map((project, i) => (
-            <Reveal key={project.title} delay={i * 120} className="h-full"><ProjectCard {...project} /></Reveal>
-          ))}
-        </div>
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        {projects.map((project, i) => (
+          <Reveal key={project.title} delay={i * 120} className="h-full"><ProjectCard {...project} /></Reveal>
+        ))}
       </div>
 
       <Reveal className="mt-14">
